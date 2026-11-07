@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover">
+<meta name="theme-color" content="#140d08">
+<title>3D Model Viewer — Classroom</title>
+<link rel="stylesheet" href="viewer.css">
+</head>
+<body class="m-0 bg-black text-white">
+
+<!--
+  এই HTML শুধু কাঠামো। কোনো লজিক এখানে নেই।
+  সব JS ফাইল manifest.js থেকে লোড হয় (loader.js দিয়ে)।
+  নতুন ফাইল যোগ করতে হলে শুধু manifest.js এ নাম লিখুন।
+-->
+<div id="app" class="fixed inset-0 overflow-hidden select-none">
+  <canvas id="c"></canvas>
+  <div class="fx-glow"></div>
+
+  <header id="topbar">
+    <div class="brand">
+      <span class="brand-dot"></span>
+      <div>
+        <div class="brand-title">Model Viewer</div>
+        <div class="brand-sub" id="propTitle">—</div>
+      </div>
+    </div>
+    <div id="hud"></div>
+  </header>
+
+  <aside id="tools"></aside>
+  <nav id="chips"></nav>
+  <div id="toast"></div>
+
+  <div id="loading">
+    <div class="spin"></div>
+    <p id="loader-text">লোড হচ্ছে…</p>
+  </div>
+</div>
+
+<script src="manifest.js"></script>
+<script src="loader.js"></script>
+</body>
+</html>
